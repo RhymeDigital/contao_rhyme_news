@@ -152,7 +152,7 @@ class ApplyFilters extends \Frontend
 		if (!isset(static::$arrCachedBodyIds[$strKey]))
 		{
 			$time = time();
-			$t = \NewsModel::$strTable;
+			$t = \NewsModel::getTable();
 			$c = \ContentModel::getTable();
 			
 			$objResult = \Database::getInstance()->prepare("SELECT $c.pid FROM $c
